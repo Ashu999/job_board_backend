@@ -1,22 +1,22 @@
-FROM node:16
+# FROM node:16
 
-# Set the working directory
-WORKDIR /usr/src/app
+# # Set the working directory
+# WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# # Copy package.json and package-lock.json
+# COPY package*.json ./
 
-# Install dependencies
-RUN npm install
-RUN npm install -g ts-node
+# # Install dependencies
+# RUN npm install
+# RUN npm install -g ts-node ts-node
 
-# Copy the rest of the application code
-COPY . .
+# # Copy the rest of the application code
+# COPY . .
 
-RUN npm run db:sync
+# RUN npm run db:sync
 
-# Expose the application port
-EXPOSE 3000
+# # Expose the application port
+# EXPOSE 3000
 
-# Command to build, run the application
-CMD ["npm", "run", "dev"]
+# # Command to build, run the application
+# CMD ["npm", "run", "dev"]
