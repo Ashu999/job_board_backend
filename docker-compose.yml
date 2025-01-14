@@ -15,5 +15,18 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
+  app:
+    environment:
+      DB_HOST: mysql
+    build: .
+    container_name: job_board_backend
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mysql
+    volumes:
+      - .:/usr/src/app
+
 volumes:
   mysql_data:
