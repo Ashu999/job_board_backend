@@ -1,16 +1,5 @@
 # Project Title
 
-## Running the Application with Docker
-
-To run the application using Docker, follow these steps:
-
-**Build the Docker image for both app and mysql:**
-   ```bash
-   docker-compose up --build
-
-   app runs on: http://localhost:3000/
-   ```
-
 ## Local Setup Instructions
 
 1. **Clone the repository:**
