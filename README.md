@@ -22,6 +22,7 @@
 4. **Install dependencies:**
    ```bash
    npm install
+   npm i -g ts-node
    ```
 
 5. **Sync the database:**
