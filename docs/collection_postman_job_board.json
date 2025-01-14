@@ -1,0 +1,142 @@
+{
+    "info": {
+        "_postman_id": "11187d45-1da1-450e-b737-390da33e48bf",
+        "name": "job_board",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "health",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/",
+                    "path": [
+                        ""
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "Create a new job posting",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/jobs",
+                    "path": [
+                        "jobs"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\r\n    \"title\": \"Software Engineer\",\r\n    \"company\": \"Tech Innovations Inc.\",\r\n    \"location\": \"New York, NY\",\r\n    \"salary\": 120000,\r\n    \"description\": \"We are looking for a skilled Software Engineer to join our team.\"\r\n}"
+                }
+            }
+        },
+        {
+            "name": "Retrieve all postings",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/jobs",
+                    "path": [
+                        "jobs"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "asf"
+                }
+            }
+        },
+        {
+            "name": "Retrieve a single posting by ID",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/jobs/670ced1e-20df-4ed5-85e5-d280279a6283",
+                    "path": [
+                        "jobs",
+                        "670ced1e-20df-4ed5-85e5-d280279a6283"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "Update a posting by ID",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:3000/jobs/cbbe8e50-7d87-4d50-81b7-7c9e6b1c4cc8",
+                    "path": [
+                        "jobs",
+                        "cbbe8e50-7d87-4d50-81b7-7c9e6b1c4cc8"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n    \"title\": \"Senior Software Engineer\",\n    \"company\": \"Tech Innovations Inc.\",\n    \"location\": \"New York, NY\",\n    \"salary\": 130000,\n    \"description\": \"We are looking for a Senior Software Engineer to lead our development team.\"\n}"
+                }
+            }
+        },
+        {
+            "name": "Delete a posting by ID",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3000/jobs/bf17333a-d862-40c1-b5fc-981ddc25f0a3",
+                    "path": [
+                        "jobs",
+                        "bf17333a-d862-40c1-b5fc-981ddc25f0a3"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        }
+    ]
+}

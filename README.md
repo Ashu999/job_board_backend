@@ -15,8 +15,8 @@ To run the application using Docker, follow these steps:
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/Ashu999/job_board_backend.git
+   cd job_board_backend
    ```
 
 2. **Create a `.env` file:**
@@ -43,3 +43,7 @@ To run the application using Docker, follow these steps:
    ```bash
    npm run dev
    ```
+
+## Testing APIs
+
+Import Postman collection (also contains input examples): [Postman Collection](./docs/collection_postman_job_board.json)
