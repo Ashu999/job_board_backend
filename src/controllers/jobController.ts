@@ -8,18 +8,16 @@ export const healthCheck: RequestHandler = (req: Request, res: Response): void =
     res.status(200).json(createApiResponse('success', 200, { status: 'healthy' }));
 };
 
+// Create a new job posting
 export const createJob: RequestHandler = async (req: Request, res: Response): Promise<void> => {
-
     const requiredFields = ['title', 'company', 'location', 'salary', 'description'];
     const missingFields = requiredFields.filter(field => !req.body[field]);
-
     if (missingFields.length > 0) {
         res.status(400).json(createApiResponse('error', 400, undefined, 'Missing required fields', `Please provide the following fields: ${missingFields.join(', ')}`));
         return;
     }
 
     const jobWithId = { ...req.body, id: uuidv4() };
-
     try {
         const job = await Job.create(jobWithId);
         res.status(201).json(createApiResponse('success', 201, job));
